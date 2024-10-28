@@ -1,0 +1,236 @@
+body {
+  font-family: "Nunito", serif;
+  background-color: #333;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+}
+
+.panel h2 a {
+  text-decoration: none;
+  color: #00cc99;
+  font-size: 1.5em;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    list-style: none;
+    gap: 20px;
+  }
+
+  .menu li {
+    display: inline-block;
+  }
+
+.reg {
+  margin-left: auto;
+}
+
+.menu a, .reg a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1em;
+  justify-content: center;
+}
+
+.reg button {
+  background-color: #00cc99;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.logo_text {
+  margin-right: auto;
+}
+
+.news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .new {
+    width: 720px;
+    border-radius: 10px;
+  }
+
+  .play-icon {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    opacity: 0.95;
+    pointer-events: none;
+  }
+
+  .caption {
+    margin-top: 10px;
+    margin-left: 45%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: "Nunito", serif;
+  }
+
+  /* Основной стиль контейнера */
+.trending-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Nunito", serif;
+  }
+  
+  /* Заголовок и "View All" */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .header h2 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", serif;
+  }
+  .view-all {
+    color: white; /* Мятный цвет */
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 20%;
+    text-decoration: none;
+    font-family: "Nunito", serif;
+  }
+  
+  /* Стили для списка постеров */
+  .anime-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "Nunito", serif;
+  }
+  .anime-item {
+    width: 150px;
+    text-align: center;
+    font-family: "Nunito", serif;
+  }
+  .anime-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  .anime-item img:hover {
+    transform: scale(1.05); /* Небольшое увеличение при наведении */
+  }
+  .anime-title {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    font-family: "Nunito", serif;
+  }
+  
+  .popular-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Nunito", serif;
+  }
+
+  .all-list{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "Nunito", serif;
+  }
+
+  button {
+    --primary-color: #2ecc9f;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+  }
+  
+  button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  button:hover .arrow:before {
+    right: 0;
+  }
+
+.reg{
+    position: relative;
+    margin-left: 60%
+}
+
+  .reg a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: "Nunito", serif;
+  }
+
+  

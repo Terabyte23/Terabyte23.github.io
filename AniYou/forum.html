@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniYou</title>
+    <link rel="stylesheet" href="assects/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+        font-family: "Nunito", sans-serif;
+        background-color: #1e1e1e;
+        color: whitesmoke;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Верхняя панель навигации */
+    .panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 10px 20px;
+    }
+
+    .panel h2 a {
+        text-decoration: none;
+        color: #00cc99;
+        font-size: 1.5em;
+    }
+
+    .menu, .reg {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .menu a, .reg a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 1em;
+    }
+
+    .reg button {
+        background-color: #00cc99;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .comentarii{
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: "Nunito", sans-serif;
+    }
+</style>
+<body>
+
+<div class="panel">
+        <h2 class="logo_text"><a href="index.html">AniYou</a></h2>
+        <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="anime.html">Аниме</a></li>
+            <li><a href="forum.html">Форум</a></li>
+        </ul>
+        <ul class="reg">
+            <button><a href="login.html">Вход</a></button>
+        </ul>
+</div> 
+<div class="comentarii">
+<h2>Оставьте комментарий</h2>
+
+<div class="comment-box">
+    <input type="text" id="nicknameInput" placeholder="Введите ваш ник" /><br><br>
+    <textarea id="commentInput" rows="4" cols="50" placeholder="Введите ваш комментарий..."></textarea><br>
+    <button onclick="addComment()">Отправить</button>
+</div>
+
+<div class="comments" id="commentsSection">
+    <h3>Комментарии:</h3>
+    <!-- Комментарии будут отображаться здесь -->
+</div>
+</div>
+<script>
+      function addComment() {
+        var nickname = document.getElementById("nicknameInput").value.trim();
+        var commentText = document.getElementById("commentInput").value.trim();
+        
+        if (nickname === "") {
+            alert("Пожалуйста, введите ваш ник.");
+            return;
+        }
+
+        if (commentText === "") {
+            alert("Пожалуйста, введите комментарий.");
+            return;
+        }
+
+        var commentsSection = document.getElementById("commentsSection");
+        var newComment = document.createElement("div");
+        newComment.className = "comment";
+        newComment.textContent = nickname + ": " + commentText; // Добавление ника к комментарию
+
+        commentsSection.appendChild(newComment);
+        document.getElementById("nicknameInput").value = ""; // Очистить поле ввода ника
+        document.getElementById("commentInput").value = ""; // Очистить поле ввода комментария
+    }
+</script>
+
+</body>
+</html>

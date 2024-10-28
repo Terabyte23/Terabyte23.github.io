@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandadan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: "Nunito", sans-serif;
+        background-color: #1e1e1e;
+        color: whitesmoke;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Верхняя панель навигации */
+    .panel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #111;
+        padding: 10px 20px;
+    }
+
+    .panel h2 a {
+        text-decoration: none;
+        color: #00cc99;
+        font-size: 1.5em;
+    }
+
+    .menu, .reg {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        font-family: "Nunito", sans-serif;
+    }
+
+    .menu a, .reg a {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 1em;
+    }
+
+    .reg button {
+        background-color: #00cc99;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Секция обложки */
+    .cover {
+        background-image: url('../assects/img/coverranma.png');
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .cover h2 {
+        font-size: 3em;
+        color: whitesmoke;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .cover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        z-index: 0;
+    }
+
+    /* Секция описания */
+    .description {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px;
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: #333;
+        border-radius: 10px;
+    }
+
+    .description img {
+        width: 250px;
+        height: 350px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Стили заголовка описания */
+    .description-title {
+        font-size: 1.8em;
+        color: whitesmoke;
+        margin-bottom: 10px;
+    }
+
+    .description p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+        color: whitesmoke;
+    }
+    .description-vid {
+        max-width: 1000px;
+        margin: 20px auto;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .description-vid iframe {
+        width: 99%;
+        height: 385px;
+        border-radius: 10px;
+        border: none;
+    }
+
+</style>
+<body>
+    <!-- Верхняя панель навигации -->
+    <div class="panel">
+        <h2 class="logo_text"><a href="../index.html">AniYou</a></h2>
+        <ul class="menu">
+            <li><a href="../index.html">Главная</a></li>
+            <li><a href="../anime.html">Аниме</a></li>
+            <li><a href="../forum.html">Форум</a></li>
+        </ul>
+        <ul class="reg">
+            <button><a href="login.html">Вход</a></button>
+        </ul>
+    </div> 
+    
+    <!-- Секция обложки -->
+    <div class="cover">
+        <h2>Ранма ½</h2>
+    </div>
+
+    <!-- Описание аниме -->
+    <div class="description">
+        <!-- Изображение аниме -->
+        <img src="../assects/img/ranma.png" alt="Изображение аниме">
+        
+        <!-- Текстовое описание -->
+        <div>
+            <h2 class="description-title">О чем эта история</h2>
+            <p>
+                «Ранма ½» — комедийное аниме о молодом мастере боевых искусств Ранме Саотоме, 
+                который из-за заклятия в горячей воде превращается в девушку, а в холодной — обратно в мальчика. Ранма и его отец, 
+                Гендзи, путешествуют по Китаю для тренировки, но сталкиваются с различными врагами и комичными ситуациями. 
+                Аниме наполнено романтическими элементами, борьбой и юмором, а также исследует темы идентичности и отношений.
+            </p>
+
+            <div class="description-vid">
+                <iframe src="https://www.youtube.com/embed/O4AqQNg1MI0?si=ZeOczmFmwZLWzjO5" title="Dandadan трейлер" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
