@@ -24,6 +24,8 @@ html{
 
 .my_projects a{
     color: #39bedc;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 #mailme{
