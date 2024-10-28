@@ -17,6 +17,10 @@ html{
     background: url('img/me.jpg') center/cover no-repeat;
 }
 
+.container background{
+blur: 10%;
+}
+
 .my_projects{
     display: block;
     left: 10px;
