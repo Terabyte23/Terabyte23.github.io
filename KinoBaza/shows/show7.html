@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+    <meta charset="UTF-8">
+    <title>Фильм Интерстеллар</title>
+    <meta name="description" content="КиноБаза - это портал о кино">
+    <meta name="keywords" content="фильмы, фильмы онлайн, hd">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <main>
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="../index.html">КиноБаза</a></h1>
+                    <h2>Кино - наша страсть!</h2>
+                </div>
+            </div>
+
+            <nav>
+
+                <ul class="menu">
+                    <li class="selected"><a href="../index.html">Главная</a></li>
+                    <li><a href="../films.html">Фильмы</a></li>
+                    <li><a href="../series.html">Сериалы</a></li>
+                    <li><a href="../rating.html">Рейтинг фильмов</a></li>
+                    <li><a href="../contact.html">Контакты</a></li>
+                </ul>
+
+                <ul class="language-menu">
+                    <li><a href="show7.html">RU</a></li>
+                    <li><a href="en_show7.html">EN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="site_content">
+
+            <aside>
+
+                <div class="sitebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="ваш запрос">
+                        <input type="submit" class="btn" value="найти">
+                    </form>
+                </div>
+
+                <div class="sitebar">
+                    <h2>Вход</h2>
+                    <form action="#" method="post" id="login">
+
+                        <input type="text" name="login_field" placeholder="логин">
+                        <input type="password" name="password_field" placeholder="пароль">
+                        <input type="submit" class="btn" value="вход">
+                        <div class="lables_passreg_text">
+                            <span><a href="#">забыли пароль?</a></span> | <span><a href="#">регистрация</a></span>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="sitebar">
+                    <h2>Новости</h2>
+                    <span>31.02.2018</span>
+                    <p>Мы запустили расширенный поиск</p>
+                    <a href="#">читать</a>
+                </div>
+
+                <div class="sitebar">
+                    <h2>Рейтинг сериалов</h2>
+                    <ul>
+                        <li><a href="show5.html">Во все тяжкие</a><span class="rating_sitebar">9.5</span></li>
+                        <li><a href="show6.html">Секретные материалы</a><span class="rating_sitebar">9.3</span></li>
+                        <li><a href="show7.html">Ходячие мертвецы</a><span class="rating_sitebar">8.5</span></li>
+                        <li><a href="show8.html">Кремниевая долина</a><span class="rating_sitebar">8.0</span></li>   
+                    </ul>
+                </div>
+
+            </aside>
+
+            <section>
+
+                <h1>Ходячие мертвецы</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PlRu4N3qpbw?si=H-e87O8sm3O5nVNQ"
+                 frameborder="0" allowfullscreen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">рейтинг: </span><span class="value">8.5 / 10</span>
+                    <span class="label">год: </span><span class="value">2010</span>
+                    <span class="label">режиссеры: </span>Грег Никотеро, Майкл Е. Сатраземис, Дэвид Бойд, Эрнест Р. Дикерсон<span class="value"></span>
+                </div>
+                <hr>
+                <h2>Описание Ходячие мертвецы</h2>
+                <div class="description_film">
+                    <img src="../assets/img/dead.png">
+                    Ввязавшись в перестрелку с преступниками, помощник шерифа Рик Граймс получает серьезное ранение и теряет сознание. 
+                    Очнувшись после продолжительной комы в больнице, он понимает, что находится в полном одиночестве, здание давно заброшено, 
+                    а на улице разгуливают живые мертвецы. Осознав, что за время его пребывания в коматозном состоянии, в мире произошел зомби-апокалипсис, 
+                    мужчина спешит домой к семье, но никого там не находит. Параллельно с этим его жена Лори, сын Карл и бывший напарник Шейн Уолш, 
+                    живые и невредимые, скрываются от зомби вместе с остальной группой уцелевших людей. Очень скоро они поймут, 
+                    что в полностью преобразившемся мире их ждут куда более серьезные опасности, чем ходячие мертвецы.
+                </div>
+
+
+
+                <hr>
+                <h2>Отзывы об Ходячие мертвецы</h2>
+
+                <div class="reviews">
+                    <div class="review_name">
+                        Сергей
+                    </div>
+                    <div class="review_text">
+                        Отличный фильм, 3 часа пролетели не заметно.
+                    </div>
+                </div>
+
+                <div class="reviews">
+                    <div class="review_name">
+                        Дмитрий
+                    </div>
+                    <div class="review_text">
+                        После фильма Начало, я с не терпением ждал ещё работ от Кристофера
+                        Нолана. Ходячие мертвецы меня впечатлил.
+                    </div>
+                </div>
+                
+                <div class="send">
+                    <form action="#" method="post" id="review">
+                        <input type="text" name="review_text" placeholder="ваше имя">
+                        <textarea name="review_text"></textarea>
+                        <input class="btn" type="submit" value="отправить">
+                    </form>
+                </div>
+
+            </section>
+                </div>
+                
+
+        <div class="footer">
+            <p>
+                <a href="../index.html">Главная</a>
+                <a href="../films.html">Фильмы</a>
+                <a href="../series.html">Сериалы</a>
+                <a href="../rating.html">Рейтинг фильмов</a>
+                <a href="../contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
