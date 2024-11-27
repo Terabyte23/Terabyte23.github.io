@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        background-color: #111;
+    }
+
+    .services-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 450px; /* Растяжение по высоте */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #2a2a2a;
+        border-radius: 8px;
+        overflow: hidden; /* Скрывает лишнее */
+        margin-bottom: 50px;
+        gap: 10px;
+        background: #2a2a2a;
+        color: white;
+        font-size: 1.15em;
+        text-decoration: none !important; /* Убираем подчеркивание для всех ссылок в карточках */
+        color: inherit !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services-card:hover {
+        text-decoration: none !important;
+        transform: scale(1.05); /* Увеличение размера на 5% */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-img-top {
+        height: 200px; /* Общая высота изображений */
+        object-fit: cover; /* Масштабирование изображения */
+        width: 100%;
+    }
+
+    .card-title{
+        font-size: 1.27em;
+    }
+
+    h2{
+        margin-top: 25px;
+        font-size: 50px;
+        font-family: 'Inter', serif;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .down-arrow {
+        font-size: 2rem;
+        display: block;
+        margin-top: 20px;
+        animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+    }
+
+    .text-center{
+        color: white;
+        font-family: 'Nunito', serif;
+    }
+
+    .card-body h5,
+    .card-body p {
+        text-decoration: none !important; /* Убираем подчеркивание для текста внутри карточки */
+        color: white; /* Устанавливаем наследуемый цвет */
+        font-weight: bold;
+        font-family: 'Nunito', serif;
+    }
+
+</style>
+<body>
+
+<header>
+    <nav class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index_en.html">SpaceTour</a>
+        <div class="hamburger-menu d-md-none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav d-none d-md-flex">
+            <li class="nav-item"><a href="index_en.html" class="nav-link text-white">Home</a></li>
+            <li class="nav-item"><a href="services_en.html" class="nav-link text-white">Services</a></li>
+            <li class="nav-item"><a href="contacts_en.html" class="nav-link text-white">Contacts</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link text-white">RU</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-menu d-md-none">
+        <ul>
+            <li><a href="index_en.html">Home</a></li>
+            <li><a href="services_en.html">Services</a></li>
+            <li><a href="contacts_en.html">Contacts</a></li>
+            <li><a href="services.html">RU</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>Our services</h1>
+    <p>Discover the limitless possibilities of space tourism.</p>
+    <i class="fas fa-chevron-down down-arrow"></i>
+</div>
+
+<!-- Services Section -->
+<section class="services-section container">
+    <h2 class="text-center mb-5">What we offer</h2>
+    <div class="row gy-4">
+        <div class="col-md-4">
+            <a href="orbital-flights_en.html" class="card services-card">
+                <img src="https://www.graygroupintl.com/hubfs/Gray%20Group%20International/GGI%20-%20Assign%20and%20Sort%20%28WebP%29/Suborbital%20Flight%20A%20Primer.webp" class="card-img-top" alt="Orbital Flights">
+                <div class="card-body">
+                    <h5 class="card-title">Orbital flights</h5>
+                    <p class="card-text">Experience weightlessness and see Earth as you've never seen it before during our orbital flights.</p>
+                </div>
+            </a>
+    </div>
+        <div class="col-md-4">
+            <a href="lunar-tourism_en.html" class="card services-card">
+                <img src="https://i0.wp.com/spacenews.com/wp-content/uploads/2017/03/SpaceX_Moonshot_1040x572.jpg?fit=1040%2C572&ssl=1" class="card-img-top" alt="Lunar Tourism">
+                <div class="card-body">
+                    <h5 class="card-title">Lunar tourism</h5>
+                    <p class="card-text">Land on the Moon and step into history with our lunar expeditions.</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="luxury-space-hotels_en.html" class="card services-card">
+                <img src="https://media.architecturaldigest.com/photos/6042692350852212c50736ac/master/w_1600%2Cc_limit/Von%2520Braun%2520-%2520Interior%2520-%2520Luxury%2520Suite%2520Rendering.jpg" class="card-img-top" alt="Luxury Space Hotels">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury Space Hotels</h5>
+                    <p class="card-text">Stay in orbit while enjoying breathtaking views and luxurious accommodations.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; Space Tour 2024. All rights reserved. <a href="#">Privacy Policy</a></p>
+</footer>
+
+<!-- Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.querySelector('body');
+
+    // Переключение меню
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('show');
+        body.classList.toggle('no-scroll');
+    });
+
+    // Закрытие меню при клике вне его области
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('show');
+            body.classList.remove('no-scroll');
+        }
+    });
+</script>
+</body>
+</html>

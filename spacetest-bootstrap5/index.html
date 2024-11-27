@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космический Туризм</title>
+    <!-- Подключаем Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключаем шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <!-- Подключаем ваши стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <!-- Навигация -->
+    <nav class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="index.html">SpaceTour</a>
+        <!-- Хамбургер-меню для мобильных -->
+        <div class="hamburger-menu d-md-none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- Меню для десктопа -->
+        <ul class="nav d-none d-md-flex">
+            <li class="nav-item"><a href="index.html" class="nav-link text-white">Главная</a></li>
+            <li class="nav-item"><a href="services.html" class="nav-link text-white">Услуги</a></li>
+            <li class="nav-item"><a href="contacts.html" class="nav-link text-white">Контакты</a></li>
+            <li class="nav-item"><a href="index_en.html" class="nav-link text-white">ENG</a></li>
+        </ul>
+    </nav>
+    <!-- Мобильное меню -->
+    <div class="mobile-menu d-md-none">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="index_en.html">ENG</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- Блок героя -->
+<div class="hero">
+    <h1>Космический Туризм</h1>
+    <p>Исследуйте Вселенную вместе с нами</p>
+    <button class="btn-cta"><a href="contacts.html">Забронируйте сейчас</a></button>
+</div>
+
+<!-- Секция фич -->
+<section class="features">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 feature">
+                <img src="https://img.icons8.com/external-vitaliy-gorbachev-fill-vitaly-gorbachev/60/FFFFFF/external-planet-4th-july-vitaliy-gorbachev-fill-vitaly-gorbachev.png" alt="Planet Icon">
+                <h5>Исследуйте планеты</h5>
+                <p>Откройте для себя захватывающие места за пределами Земли.</p>
+            </div>
+            <div class="col-md-3 feature">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/star.png" alt="Stars Icon">
+                <h5>Невесомость</h5>
+                <p>Плавайте среди звезд в приключениях в невесомости.</p>
+            </div>
+            <div class="col-md-3 feature">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/rocket.png" alt="Spaceship Icon">
+                <h5>Продвинутые космические корабли</h5>
+                <p>Путешествуйте на борту новейшего космического корабля.</p>
+            </div>
+            <div class="col-md-3 feature">
+                <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/sunrise--v1.png" alt="Sunrise Icon">
+                <h5>Непревзойденные просмотры</h5>
+                <p>Посмотрите на Землю с космической точки зрения.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Секция информации -->
+<section class="info-section">
+    <div class="container">
+        <h2>Почему выбирают Космический Тур?</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="https://wallpaperaccess.com/full/39613.jpg" alt="Space View">
+                        <img src="https://wallpaperaccess.com/full/39610.jpg" alt="Space View">
+                        <img src="https://wallpaperaccess.com/full/7046.jpg" alt="Space View">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div class="info-card">
+                    <h5>Роскошные космические корабли</h5>
+                    <p>Испытайте космические путешествия с премиальным комфортом и видами.</p>
+                </div>
+                <div class="info-card">
+                    <h5>Экспертное руководство</h5>
+                    <p>Под руководством профессиональных астронавтов, обеспечивающих безопасность и обучение.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Футер -->
+<footer>
+    <p>&copy; Космический Тур 2024 года. Все права защищены. <a href="#">Политика Конфиденциальности</a></p>
+</footer>
+
+<!-- Скрипты для работы -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let index = 0;
+
+    function showNextSlide() {
+        const slides = document.querySelector('.slides');
+        const totalSlides = slides.children.length;
+
+        index = (index + 1) % totalSlides;
+
+        // Сдвигаем слайды вправо
+        slides.style.transition = "transform 1s ease-in-out";
+        slides.style.transform = `translateX(-${index * 500}px)`;
+    }
+
+    setInterval(showNextSlide, 5000);
+</script>
+
+<script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.querySelector('body');
+
+    // Переключение меню
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('show');
+        body.classList.toggle('no-scroll');
+    });
+
+    // Закрытие меню при клике вне его области
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('show');
+            body.classList.remove('no-scroll');
+        }
+    });
+</script>
+
+</body>
+</html>
