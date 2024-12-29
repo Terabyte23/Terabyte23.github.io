@@ -1,10 +1,9 @@
-/* Общий стиль для страницы */
 body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Тёмный фон */
-    color: #e0e0e0; /* Светлый цвет текста */
+    background-color: #121212;
+    color: #e0e0e0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +11,6 @@ body {
     flex-direction: column;
 }
 
-/* Стиль для заголовка */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -21,15 +19,14 @@ header {
 header h3 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #ffffff; /* Белый текст */
+    color: #ffffff;
 }
 
 header p {
     font-size: 1.2rem;
-    color: #b0b0b0; /* Бледно-серый текст */
+    color: #b0b0b0;
 }
 
-/* Стиль для контейнера */
 .container-ma {
     text-align: center;
     margin-bottom: 50px;
@@ -38,35 +35,33 @@ header p {
 .title {
     font-size: 1.8rem;
     font-weight: 400;
-    color: #ffffff; /* Белый цвет заголовка */
+    color: #ffffff;
 }
 
-/* Стиль для описания */
 .description {
     display: flex;
-    justify-content: center; /* Центрируем кнопки по горизонтали */
-    align-items: center; /* Центрируем кнопки по вертикали */
-    flex-direction: column; /* Располагаем кнопки вертикально */
-    gap: 20px; /* Отступы между кнопками */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Стиль для блока с кнопками */
 .my_projects {
     display: flex;
-    flex-direction: column; /* Кнопки расположены вертикально */
-    gap: 15px; /* Отступы между кнопками */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* Стиль для кнопок */
 .btn {
-    background-color: #333333; /* Тёмный фон кнопок */
-    color: #ffffff; /* Белый цвет текста */
+    background-color: #333333;
+    color: #ffffff;
     font-size: 1.2rem;
     padding: 15px 25px;
     border: none;
     border-radius: 15px;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные эффекты */
+    transition: background-color 0.3s ease, transform 0.3s ease;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
 }
@@ -76,31 +71,34 @@ header p {
     color: white;
 }
 
-/* Эффект при наведении на кнопку */
 .btn:hover {
-    background-color: #555555; /* Более светлый фон при наведении */
-    transform: translateY(-3px); /* Легкое поднятие кнопки */
+    background-color: #555555;
+    transform: translateY(-3px);
 }
 
-/* Стиль для футера */
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    font-size: 1.1rem;
-    color: #b0b0b0; /* Светлый текст в футере */
-    margin-top: 50px;
+    padding: 50px 0;
+    background-color: rgba(18, 18, 18, 0.9);
+    color: #b0b0b0;
 }
 
 footer a {
-    color: #00ffb2; /* Желтый цвет для ссылок */
+    color: #00ffb2;
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 footer a:hover {
-    color: #ffffff; /* Белый цвет ссылки при наведении */
+    color: #ffffff;
 }
 
-.container h1{
-    margin-left: 24%;
+.container h1 {
+    margin-left: 45%;
+    margin-bottom: 50px;
     font-weight: bold;
 }
