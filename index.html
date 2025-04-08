@@ -8,6 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script>
+        function toggleFolder(folderId) {
+    var folderContent = document.getElementById(folderId);
+    var folder = folderContent.parentElement; // Получаем родительский элемент (папку)
+
+    // Проверяем, если папка уже открыта, то закрываем её
+    if (folderContent.style.display === "block") {
+        folderContent.style.display = "none";
+        folder.classList.remove("open"); // Убираем класс для уменьшения размера
+    } else {
+        folderContent.style.display = "block";
+        folder.classList.add("open"); // Добавляем класс для увеличения
+    }
+}
+
+    </script>
 </head>
 <body>
 <header>
@@ -24,47 +40,97 @@
 <div class="description">
     <div class="container">
         <h1 class="title">My Works</h1>
-        <div class="my_projects">
-            <button class="btn"><a href="AniYou/index.html">Pure Anime Website</a></button>
-            <br>
-            <button class="btn"><a href="KinoBaza/index.html">Pure HTML/CSS Website</a></button>
-            <br>
-            <button class="btn"><a href="KinoBaza2/index.html">Pure KinoBaza2</a></button>
-            <br>
-            <button class="btn"><a href="spacetest/index.html">Pure SpaceTour</a></button>
-            <br>
-            <button class="btn"><a href="spacetest-bootstrap5/index.html">Pure SpaceTour</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/design/WTvyazaAa9RkK1FLRizLsz/Untitled?node-id=0-1&t=w7aBubAawBw2Suux-1">Figma Design</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/design/JZIG6TBbJ602b9j7bfvg2k/Menu?node-id=13-1442&t=7oqzJkacpRH3kGZe-1">Menu Dev</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/proto/JZIG6TBbJ602b9j7bfvg2k/Menu?node-id=13-416&t=R52Mi6lmCHxyctfo-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A416">Menu Prototype</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/design/q1XzY213R1kWPb5Riuo1YG/tour?node-id=0-1&t=1OGrWEbSda9WQDmP-1">Tour Dev</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/proto/q1XzY213R1kWPb5Riuo1YG/tour?node-id=1-7&p=f&t=o0B1q2EAmfi3h8kk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A7">Tour Prototype</a></button>
-            <br>
-            <button class="btn"><a href="src/js/index.html">Pure Course</a></button>
-            <br>
-            <button class="btn"><a href="Autokool/index.html">Pure Autokool</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/design/SD1IHjepgWKKzLY17P0FIR/Untitled?node-id=0-1&t=bEDOJadDzsaLCMvQ-1">Pure Autokool FigmaDesign</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/proto/SD1IHjepgWKKzLY17P0FIR/Untitled?node-id=0-1&t=bEDOJadDzsaLCMvQ-1">Pure Autokool FigmaPrototype</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/design/nhc6xtkiQUUSXMH8X1CmYh/Untitled?node-id=3-23&t=WfyvV443MU8D5uaB-1">Pure OlsaBanking FigmaDev</a></button>
-            <br>
-            <button class="btn"><a href="https://www.figma.com/proto/nhc6xtkiQUUSXMH8X1CmYh/Untitled?node-id=3-23&t=WfyvV443MU8D5uaB-1">Pure OlsaBanking FigmaPrototype</a></button>
-            <br>
-            <button class="btn"><a href="OlsaBanking_Landing/index.html">Pure OlsaBanking Website</a></button>
-        </div>
+
+        <div class="folder-container">  <!-- Добавлен контейнер для папок -->
+            <!-- Папка 1: Pure Anime Website -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderAniYou')">1. AniYou</h3>
+                <div id="folderAniYou" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="AniYou/index.html">Pure Anime Website</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 2: Pure HTML/CSS Website -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderKinoBaza')">2. KinoBaza</h3>
+                <div id="folderKinoBaza" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="KinoBaza/index.html">Pure HTML/CSS Website</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 3: Pure KinoBaza2 -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderKinoBaza2')">3. KinoBaza2</h3>
+                <div id="folderKinoBaza2" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="KinoBaza2/index.html">Pure KinoBaza2</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 4: Pure SpaceTour -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderSpaceTour')">4. SpaceTour</h3>
+                <div id="folderSpaceTour" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="spacetest/index.html">Pure SpaceTour</a></button>
+                    <button class="btn"><a href="spacetest-bootstrap5/index.html">Pure SpaceTour Bootstrap 5</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 5: Figma Design -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderFigmaDesign')">5. Figma Design</h3>
+                <div id="folderFigmaDesign" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="https://www.figma.com/design/WTvyazaAa9RkK1FLRizLsz/Untitled?node-id=0-1&t=w7aBubAawBw2Suux-1">Figma Design</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 6: Menu Dev -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderMenuDev')">6. Menu Dev</h3>
+                <div id="folderMenuDev" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="https://www.figma.com/design/JZIG6TBbJ602b9j7bfvg2k/Menu?node-id=13-1442&t=7oqzJkacpRH3kGZe-1">Menu Dev</a></button>
+                    <button class="btn"><a href="https://www.figma.com/proto/JZIG6TBbJ602b9j7bfvg2k/Menu?node-id=13-416&t=R52Mi6lmCHxyctfo-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=13%3A416">Menu Prototype</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 7: Tour Dev -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderTourDev')">7. Tour Dev</h3>
+                <div id="folderTourDev" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="https://www.figma.com/design/q1XzY213R1kWPb5Riuo1YG/tour?node-id=0-1&t=1OGrWEbSda9WQDmP-1">Tour Dev</a></button>
+                    <button class="btn"><a href="https://www.figma.com/proto/q1XzY213R1kWPb5Riuo1YG/tour?node-id=1-7&p=f&t=o0B1q2EAmfi3h8kk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A7">Tour Prototype</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 8: Autokool -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderAutokool')">8. Autokool</h3>
+                <div id="folderAutokool" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="Autokool/index.html">Pure Autokool</a></button>
+                    <button class="btn"><a href="https://www.figma.com/design/SD1IHjepgWKKzLY17P0FIR/Untitled?node-id=0-1&t=bEDOJadDzsaLCMvQ-1">Pure Autokool FigmaDesign</a></button>
+                    <button class="btn"><a href="https://www.figma.com/proto/SD1IHjepgWKKzLY17P0FIR/Untitled?node-id=0-1&t=bEDOJadDzsaLCMvQ-1">Pure Autokool FigmaPrototype</a></button>
+                </div>
+            </div>
+
+            <!-- Папка 9: OlsaBanking -->
+            <div class="folder">
+                <h3 onclick="toggleFolder('folderOlsaBanking')">9. OlsaBanking</h3>
+                <div id="folderOlsaBanking" class="folder-content" style="display:none;">
+                    <button class="btn"><a href="https://www.figma.com/design/nhc6xtkiQUUSXMH8X1CmYh/Untitled?node-id=3-23&t=WfyvV443MU8D5uaB-1">Pure OlsaBanking FigmaDev</a></button>
+                    <button class="btn"><a href="https://www.figma.com/proto/nhc6xtkiQUUSXMH8X1CmYh/Untitled?node-id=3-23&t=WfyvV443MU8D5uaB-1">Pure OlsaBanking FigmaPrototype</a></button>
+                    <button class="btn"><a href="OlsaBanking_Landing/index.html">Pure OlsaBanking Website</a></button>
+                </div>
+            </div>
+        </div> <!-- end folder-container -->
     </div>
 </div>
+
 
 <footer>
     Ready for collaboration!
     mailto:<a id="mailme" href="mailto:example@gmail.com"> Write to me</a>
 </footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
