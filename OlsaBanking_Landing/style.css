@@ -1,0 +1,1761 @@
+body {
+    background-color: #01040F;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    color: white;
+    width: 100px;
+    font-weight: 500;
+}
+
+.grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(40%) contrast(120%) blur(4px);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    transition: text-decoration 0.3s ease;
+}
+
+nav a.active {
+    text-decoration: underline;
+    font-weight: 600;
+    text-decoration-thickness: 3px;
+}
+
+.price{
+    width: 126px;
+    height: 42px;
+    border-radius: 39px;
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid #ffffff; /* Обводка белого цвета */
+    color: white; /* Цвет текста */
+    font-size: 16px;
+    padding: 10px 20px; /* Размеры кнопки */
+    cursor: pointer; /* Указатель курсора */
+    transition: 0.5s ease-in-out;
+}
+
+.price:hover{
+    background-color: white;
+    color: black;
+}
+
+.new-account{
+    width: 181px;
+    height: 42px;
+    border-radius: 39px;
+    background-color: #6868AE;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Увеличиваем размер шрифта */
+    font-weight: 400;
+    transition: 0.5s ease-in-out;
+}
+
+.new-account:hover{
+    background-color: #6d13da;
+    color: white;
+    font-size: 18px;
+}
+
+.buttons-head {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    right: 20px; /* Кнопки сдвинуты вправо */
+}
+
+.background-image {
+    position: absolute;
+    top: -30%;
+    left: 43%;
+    width: 808px;
+    height: 808px; /* Покрывает всю видимую область */
+    object-fit: cover;
+    filter: blur(5px) brightness(0.4); /* Эффект блюра */
+    z-index: 0; /* Убедитесь, что изображение за всеми элементами, кроме сетки */
+    transform: scaleX(-1);
+}
+
+.background-image-service{
+    position: absolute;
+    top: -15%;
+    left: -2%;
+    width: 808px;
+    height: 808px; /* Покрывает всю видимую область */
+    object-fit: cover;
+    filter: blur(5px) brightness(0.4); /* Эффект блюра */
+    z-index: 0; /* Убедитесь, что изображение за всеми элементами, кроме сетки */
+    
+}
+
+.background-image-market{
+    position: absolute;
+    top: 5%;
+    left: 57%;
+    width: 808px;
+    height: 808px; /* Покрывает всю видимую область */
+    object-fit: cover;
+    filter: blur(5px) brightness(0.4); /* Эффект блюра */
+    z-index: 0; /* Убедитесь, что изображение за всеми элементами, кроме сетки */
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.background-image-faqs{
+    position: absolute;
+    top: -10%;
+    left: 57%;
+    width: 808px;
+    height: 808px; /* Покрывает всю видимую область */
+    object-fit: cover;
+    filter: blur(5px) brightness(0.4); /* Эффект блюра */
+    z-index: 0; /* Убедитесь, что изображение за всеми элементами, кроме сетки */
+    transform: scaleX(-1);
+}
+
+.welcome {   
+    width: 360px; /* Ширина блока */
+    height: 60px; /* Высота блока */
+    background-color: rgba(255, 255, 255, 0); /* Прозрачный белый фон */
+    border: 2px solid white; /* Белая обводка */
+    border-radius: 39px; /* Скругление углов */
+    padding: 0 20px; /* Отступы внутри блока (слева и справа) */
+    box-sizing: border-box;
+    display: flex; /* Используем Flexbox для выравнивания элементов */
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: flex-start; /* Выравнивание элементов по горизонтали */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 23%; /* Отступ от верхней части экрана на 50% */
+    left: 50%; /* Отступ от левой части экрана на 50% */
+    transform: translate(-50%, -50%); /* Смещаем блок на 50% от его ширины и высоты, чтобы точно центрировать */
+}
+
+
+.welcome-icon {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.welcome-text {
+    color: white;
+    font-size: 18px; /* Размер шрифта текста */
+    font-weight: 400;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    font-size: 65px;
+    font-weight: 400;
+    top: 27%; /* Отступ сверху, чтобы заголовок не прилипал к welcome */
+    left: 24%;
+    z-index: 1001;
+    text-align: center;
+}
+
+
+.under-title{
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    font-weight: 300;
+    top: 45%; /* Отступ сверху, чтобы заголовок не прилипал к welcome */
+    left: 25%;
+    z-index: 1001;
+    text-align: center;
+}
+
+.title-service{
+    position: absolute;
+    color: white;
+    font-size: 65px;
+    font-weight: 400;
+    top: 24%;
+    left: 20%;
+    z-index: 1001;
+    text-align: center; 
+}
+
+.under-title-service{
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    font-weight: 300;
+    top: 36%; /* Отступ сверху, чтобы заголовок не прилипал к welcome */
+    left: 28%;
+    z-index: 1001;
+    text-align: center;
+}
+
+.title-market{
+    position: absolute;
+    color: white;
+    font-size: 65px;
+    font-weight: 400;
+    top: 20%;
+    left: 26%;
+    z-index: 1001;
+    text-align: center; 
+}
+
+.under-title-market{
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    font-weight: 300;
+    top: 36%; /* Отступ сверху, чтобы заголовок не прилипал к welcome */
+    left: 28%;
+    z-index: 1001;
+    text-align: center;
+}
+
+.title-faqs{
+    position: absolute;
+    color: white;
+    font-size: 65px;
+    font-weight: 400;
+    top: 22%;
+    left: 26%;
+    z-index: 1001;
+    text-align: center; 
+}
+
+.under-title-faqs{
+    position: absolute;
+    color: gray;
+    font-size: 24px;
+    font-weight: 300;
+    top: 34%; /* Отступ сверху, чтобы заголовок не прилипал к welcome */
+    left: 33%;
+    z-index: 1001;
+    text-align: center;
+}
+
+.started-button {
+    position: absolute;
+    width: 270px;
+    height: 60px;
+    background-color: #6868AE;
+    border: none;
+    border-radius: 39px;
+    top: 60%;
+    left: 24%;
+    display: flex; /* Используем Flexbox для выравнивания содержимого */
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    gap: 10px; /* Отступ между текстом и иконкой */
+}
+
+.started-text {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.started-icon {
+    width: 50px;
+    height: 50px;
+    transform: rotate(-90deg); /* Начальный угол поворота */
+    transition: transform 0.6s ease; /* Плавное вращение */
+}
+
+.started-button:hover .started-icon {
+    transform: scale(1.2) rotate(270deg) translateY(10px); /* Увеличение и полный оборот при наведении */
+}
+
+.started-button-service{
+    position: absolute;
+    width: 320px;
+    height: 80px;
+    background-color: #6868AE;
+    border: none;
+    border-radius: 39px;
+    top: 60%;
+    left: 42%;
+    display: flex; /* Используем Flexbox для выравнивания содержимого */
+    align-items: center; /* Центрируем элементы по вертикали */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    gap: 10px; /* Отступ между текстом и иконкой */
+}
+
+.started-text-service{
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.started-icon-service{
+    width: 50px;
+    height: 50px;
+    transform: rotate(-90deg); /* Начальный угол поворота */
+    transition: transform 0.6s ease; /* Плавное вращение */
+}
+
+.started-button-service:hover .started-icon-service{
+    transform: scale(1.2) rotate(270deg) translateY(10px); /* Увеличение и полный оборот при наведении */
+}
+
+.started-button-service::before,
+.started-button-service::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 37vw; /* Ширина линий на половину ширины экрана */
+    height: 2px; /* Толщина линий */
+    background-color: #8b8a8a; /* Цвет линий */
+    z-index: 0; /* Обеспечиваем, чтобы линии находились позади кнопки */
+}
+
+.started-button-service::before {
+    left: -40vw; /* Линия слева будет начинаться с левого края экрана */
+}
+
+.started-button-service::after {
+    right: -40vw; /* Линия справа будет тянуться до правого края экрана */
+}
+
+
+.avatar-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+}
+
+.avatar {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%;
+    border: 2px solid #000; /* Optional: to distinguish avatars */
+    margin-left: -15px; /* Adjust the overlap */
+    object-fit: cover;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+}
+
+.avatars-text {
+    margin-left: 20px; /* Adjust the spacing between avatars and text */
+    font-size: 16px; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+}
+
+.custom-shape {
+    position: absolute;
+    top: 70%;
+    left: -8px;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(-10deg); /* Наклон */
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape2{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.custom-shape3{
+    position: absolute;
+    top: 70%;
+    left: 40.3%;
+    width: 325px;
+    height: 230px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape4{
+    position: absolute;
+    top: 70%;
+    left: 60.5%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.custom-shape5{
+    position: absolute;
+    top: 70%;
+    left: 81%;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(10deg); /* Наклон */
+    padding: 20px;
+}
+
+.custom-shape2-title{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape2-text{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.custom-shape2-button1{
+    position: absolute;
+    width: 140px;
+    height: 42px;
+    left: 7px;
+    border-radius: 39px;
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid #ffffff; /* Обводка белого цвета */
+    color: white; /* Цвет текста */
+    font-size: 16px;
+    padding: 10px 20px; /* Размеры кнопки */
+    cursor: pointer; /* Указатель курсора */
+    transition: 0.5s ease-in-out;
+}
+
+.custom-shape2-button1:hover{
+    background-color: white;
+    color: black;
+}
+
+.custom-shape2-button2{
+    position: absolute;
+    width: 180px;
+    height: 42px;
+    left: 45%;
+    border-radius: 39px;
+    background-color: transparent; /* Прозрачный фон */
+    border: 2px solid #ffffff; /* Обводка белого цвета */
+    color: white; /* Цвет текста */
+    font-size: 16px;
+    padding: 10px 20px; /* Размеры кнопки */
+    cursor: pointer; /* Указатель курсора */
+    transition: 0.5s ease-in-out;
+}
+
+.custom-shape2-button2:hover{
+    background-color: white;
+    color: black;
+}
+
+.arrow-on-button{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.custom-shape3-text{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.custom-shape3-btn1 {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    border-radius: 26px;
+    background-color: transparent;
+    border: 2px solid #8a8a8a;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-shape3-btn1 img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.custom-shape3-btn1 p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.currency-btn {
+    position: relative;
+    left: 55%;
+    top: 4%;
+    display: flex;
+    align-items: center;
+    border-radius: 26px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.currency-btn span {
+    margin-left: 5px;
+}
+
+.custom-shape3-btn2 {
+    position: absolute;
+    width: 250px;
+    height: 60px;
+    top: 65%;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    border-radius: 26px;
+    background-color: transparent;
+    border: 2px solid #8a8a8a;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.custom-shape3-btn2 img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.custom-shape3-btn2 p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.currency-btn2 {
+    position: relative;
+    left: 55%;
+    top: 25%;
+    display: block;
+    align-items: center;
+    border-radius: 26px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.currency-btn2 span {
+    margin-left: 5px;
+}
+
+.img-component{
+    width: 50px;
+    height: 50px;
+    z-index: 1003;
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transition: transform 0.5s;
+}
+
+.img-component:hover{
+    transform: rotateZ(180deg);
+}
+
+.logo-custom-shape4{
+    position: absolute;
+    left: 15px;
+}
+
+.show-custom-shape4{
+    position: relative;
+    border-color: white;
+    left: 55%;
+    display: block;
+    align-items: center;
+    border-radius: 26px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.show-custom-shape4:hover{
+    background-color: white;
+    color: black;
+}
+
+.text-custom-shape4{
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+    top: 25%;
+    left: 0;
+}
+
+.pin-custom-shape4{
+    position: relative;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    top: 20%;
+    left: 0;
+}
+
+.custom-shape-service{
+    position: absolute;
+    top: 70%;
+    left: -8px;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(-10deg); /* Наклон */
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape2-service{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.custom-shape3-service{
+    position: absolute;
+    top: 70%;
+    left: 40.3%;
+    width: 325px;
+    height: 160px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape4-service{
+    position: absolute;
+    top: 70%;
+    left: 60.5%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape5-service{
+    position: absolute;
+    top: 70%;
+    left: 81%;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(10deg); /* Наклон */
+    padding: 20px;
+}
+
+.custom-shape2-title-service{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape2-text-service{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.custom-shape3-title-service{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape3-text-service{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.custom-shape4-title-service{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape4-text-service{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.custom-shape-market{
+    position: absolute;
+    top: 70%;
+    left: -8px;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(-10deg); /* Наклон */
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape2-market{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    
+    
+}
+
+.custom-shape3-market{
+    position: absolute;
+    top: 70%;
+    left: 40.3%;
+    width: 325px;
+    height: 230px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape4-market{
+    position: absolute;
+    top: 70%;
+    left: 60.5%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape5-market{
+    position: absolute;
+    top: 70%;
+    left: 81%;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(10deg); /* Наклон */
+    padding: 20px;
+}
+
+.custom-shape2-title-market{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.custom-shape2-market li{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+.custom-shape3-title-market{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape3-market li{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.custom-shape4-title-market{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape4-market li{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.custom-shape-faqs{
+    position: absolute;
+    top: 70%;
+    left: -8px;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(-10deg); /* Наклон */
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape2-faqs{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    
+    
+}
+
+.custom-shape3-faqs{
+    position: absolute;
+    top: 70%;
+    left: 40.3%;
+    width: 325px;
+    height: 230px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape4-faqs{
+    position: absolute;
+    top: 70%;
+    left: 60.5%;
+    width: 325px;
+    height: 210px;
+    background-color: #01040F; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white;
+    padding: 20px;
+    text-align: center;
+}
+
+.custom-shape5-faqs{
+    position: absolute;
+    top: 70%;
+    left: 81%;
+    width: 325px;
+    height: 210px;
+    background-color: #070C16; /* Темный фон */
+    border-radius: 20px; /* Закругленные углы */
+    border: 2px solid white; /* Белая обводка */
+    transform: perspective(500px)  rotateY(10deg); /* Наклон */
+    padding: 20px;
+}
+
+.custom-shape2-title-faqs{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.custom-shape2-faqs li{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.custom-shape2-faqs var{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.custom-shape3-title-faqs{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape3-faqs li{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.custom-shape3-faqs var{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.custom-shape4-title-faqs{
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.custom-shape4-faqs li{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.custom-shape4-faqs var{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+var {
+    font-weight: 500;
+  }
+
+  @media (max-width: 1024px) {
+    html {
+      font-size: 14px;
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      max-width: 1024px;
+      min-height: 1900px;
+      overflow-x: hidden;
+    }
+  
+    .container {
+      max-width: 1024px;
+      min-height: 1900px;
+      margin: 0 auto;
+      overflow-x: hidden;
+    }
+  
+    .background-image {
+      position: absolute;
+      top: -10%;
+      left: 35%;
+      width: 708px;
+      height: 708px;
+      max-width: 100%;
+    }
+  
+    .title {
+      position: absolute;
+      font-size: 3rem;
+      left: 20%;
+    }
+  
+    .under-title{
+      position: absolute;
+      font-size: 2rem;
+      left: 0%;
+      top: 35%;
+    }
+
+    .title-service {
+        position: absolute;
+        font-size: 4rem;
+        left: 10%;
+    }
+    
+    .under-title-service{
+        position: absolute;
+        font-size: 2rem;
+        left: 5%;
+        top: 35%;
+    }
+
+    .title-market {
+        position: absolute;
+        font-size: 4rem;
+        left: 10%;
+    }
+    
+    .under-title-market{
+        position: absolute;
+        font-size: 2rem;
+        left: 0%;
+        top: 30%;
+    }
+
+    .title-faqs {
+        position: absolute;
+        font-size: 4rem;
+        left: 10%;
+    }
+    
+    .under-title-faqs{
+        position: absolute;
+        font-size: 2rem;
+        left: 10%;
+        top: 30%;
+    }
+
+    .background-image-market{
+        left: 25%;
+        top: -10px;
+    }
+
+    .background-image-faqs{
+        left: 25%;
+        top: 10%;
+    }
+  
+    .price {
+      width: 100px;
+    }
+  
+    .buttons-head {
+      gap: 1rem;
+    }
+  
+    .welcome {
+      top: 20%;
+    }
+  
+    .avatar {
+      position: relative;
+      left: 30%;
+    }
+  
+    .avatars-text {
+      position: relative;
+      left: 30%;
+    }
+  
+    .custom-shape {
+      display: none;
+    }
+  
+    .custom-shape2 {
+      width: 600px;
+      position: absolute;
+      left: 18%;
+    }
+  
+    .custom-shape2-button1 {
+      width: 200px;
+      height: 60px;
+      left: 5%;
+      top: 60%;
+      font-weight: 500;
+    }
+  
+    .custom-shape2-button2 {
+      width: 200px;
+      height: 60px;
+      left: 60%;
+      top: 60%;
+      font-weight: 500;
+    }
+  
+    .custom-shape3 {
+      position: absolute;
+      top: 95%;
+      left: 28%;
+      width: 400px;
+      height: 300px;
+    }
+  
+    .custom-shape3-btn1 {
+      width: 300px;
+      height: 80px;
+    }
+  
+    .currency-btn {
+      top: 7%;
+    }
+  
+    .custom-shape3-btn2 {
+      width: 300px;
+      height: 80px;
+    }
+  
+    .currency-btn2 {
+      top: 37%;
+    }
+  
+    .img-component {
+      top: 47%;
+      width: 70px;
+      height: 70px;
+    }
+  
+    .custom-shape4 {
+      position: absolute;
+      top: 126%;
+      width: 600px;
+      left: 18%;
+    }
+  
+    .show-custom-shape4 {
+      font-size: 24px;
+      left: 65%;
+    }
+  
+    .text-custom-shape4 {
+      top: 10%;
+      font-size: 26px;
+    }
+  
+    .pin-custom-shape4 {
+      top: 10%;
+      font-size: 30px;
+    }
+  
+    .custom-shape5 {
+      display: none;
+    }
+
+    .custom-shape-service{
+        display: none;
+      }
+    
+      .custom-shape2-service{
+        width: 600px;
+        position: absolute;
+        left: 18%;
+      }
+    
+      .custom-shape2-title-service{
+        font-size: 34px;
+      }
+
+      .custom-shape2-text-service{
+        font-size: 28px;
+      }
+    
+      .custom-shape3-service {
+        position: absolute;
+        top: 95%;
+        left: 28%;
+        width: 400px;
+        height: 300px;
+      }
+    
+      .custom-shape3-title-service{
+        font-size: 34px;
+      }
+
+      .custom-shape3-text-service{
+        font-size: 28px;
+      }
+    
+      .img-component-service {
+        top: 47%;
+        width: 70px;
+        height: 70px;
+      }
+    
+      .custom-shape4-service {
+        position: absolute;
+        top: 126%;
+        width: 600px;
+        left: 18%;
+      }
+    
+      .show-custom-shape4-service {
+        font-size: 24px;
+        left: 65%;
+      }
+    
+      .custom-shape4-title-service{
+        font-size: 34px;
+      }
+
+      .custom-shape4-text-service{
+        font-size: 28px;
+      }
+
+      .custom-shape2-market{
+        width: 600px;
+        position: absolute;
+        left: 18%;
+      }
+    
+      .custom-shape2-title-market{
+        font-size: 34px;
+      }
+    
+      .custom-shape3-market {
+        position: absolute;
+        top: 95%;
+        left: 28%;
+        width: 400px;
+        height: 300px;
+      }
+    
+      .custom-shape3-title-market{
+        font-size: 34px;
+      }
+    
+      .custom-shape4-market {
+        position: absolute;
+        top: 126%;
+        width: 600px;
+        left: 18%;
+      }
+    
+      .show-custom-shape4-market {
+        font-size: 24px;
+        left: 65%;
+      }
+    
+      .custom-shape4-title-market{
+        font-size: 34px;
+      }
+
+      .custom-shape2-faqs{
+        width: 600px;
+        position: absolute;
+        left: 18%;
+      }
+    
+      .custom-shape2-title-faqs{
+        font-size: 34px;
+      }
+    
+      .custom-shape3-faqs {
+        position: absolute;
+        top: 95%;
+        left: 28%;
+        width: 400px;
+        height: 300px;
+      }
+    
+      .custom-shape3-title-faqs{
+        font-size: 34px;
+      }
+    
+      .custom-shape4-faqs {
+        position: absolute;
+        top: 126%;
+        width: 600px;
+        left: 18%;
+      }
+    
+      .show-custom-shape4-faqs {
+        font-size: 24px;
+        left: 65%;
+      }
+    
+      .custom-shape4-title-faqs{
+        font-size: 34px;
+      }
+
+      .custom-shape2-market li,
+      .custom-shape3-market li,
+      .custom-shape4-market li{
+        font-size: 20px;
+        margin-bottom: 7px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      
+
+      .custom-shape2-faqs li,
+      .custom-shape3-faqs li,
+      .custom-shape4-faqs li{
+        font-size: 24px;
+      }
+    
+      .custom-shape2-faqs var,
+      .custom-shape3-faqs var,
+      .custom-shape4-faqs var{
+        font-size: 24px;
+      }
+
+      .custom-shape5,
+      .custom-shape5-service,
+      .custom-shape5-market,
+      .custom-shape5-faqs {
+        display: none;
+      }
+
+      .custom-shape,
+      .custom-shape-service,
+      .custom-shape-market,
+      .custom-shape-faqs {
+        display: none;
+      }
+
+      .started-button-service{
+        left:35%;
+      }
+
+      .started-text-service{
+        font-size: 24px;
+      }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .logo{
+        position: absolute;
+        top: 10%;
+    }
+
+    .buttons-head{
+        position: absolute;
+        top: 50%
+    }
+
+    .price{
+        width: 100px;
+    }
+
+    .new-account{
+        width: 120px;
+    }
+
+    nav{
+        position: absolute;
+        top: 160%
+    }
+
+    .title{
+        position: absolute;
+        left: 12%;
+        font-size: 24px;
+    }
+
+    .under-title{
+        top: 33%;
+        font-size: 18px;
+    }
+
+    .background-image{
+        top: 5%;
+        left: 10%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .started-button{
+        width: 200px;
+        height: 50px;
+        left: 30%;
+        top: 52%;
+    }
+
+    .started-text{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .started-text-service{
+        font-size: 20px;
+    }
+
+    .started-icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .avatar-container{
+        top: 59%;
+        left: -10%;
+    }
+
+    .custom-shape2,
+    .custom-shape3,
+    .custom-shape4{
+        width: 300px;
+        height: 200px;
+        left: 10%;
+    }
+
+    .custom-shape3{
+        height: 240px;
+        top: 100%;
+    }
+
+    .custom-shape4{
+        top: 135%;
+    }
+
+    .custom-shape2-button1{
+        top: 65%;
+        width: 150px;
+    }
+
+    .custom-shape2-button2{
+        top: 65%;
+        width: 150px;
+        left: 53%;
+    }
+
+    .arrow-on-button{
+        display: none;
+    }
+
+    .custom-shape3-btn1{
+        left: 7%;
+    }
+
+    .custom-shape3-btn2{
+        left: 7%;
+    }
+
+    .currency-btn{
+        left: 65%;
+    }
+
+    .currency-btn2{
+        left: 65%;
+        top: 30%;
+    }
+
+    .img-component{
+        width: 50px;
+        height: 50px;
+        top: 54%;
+    }
+
+    .show-custom-shape4{
+        left: 50%;
+        font-size: 18px;
+    }
+
+    .pin-custom-shape4{
+        top: -3%;
+    }
+
+
+
+    .title-service{
+        position: absolute;
+        left: 5%;
+        font-size: 24px;
+    }
+
+    .under-title-service{
+        top: 33%;
+        left: 0%;
+        font-size: 18px;
+    }
+
+    .background-image-service{
+        top: 0%;
+        left: 0%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .started-button-service{
+        width: 250px;
+        height: 60px;
+        left: 22%;
+        top: 52%;
+    }
+
+    .started-text{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .started-icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-shape2-service,
+    .custom-shape3-service,
+    .custom-shape4-service{
+        width: 300px;
+        height: 200px;
+        left: 10%;
+    }
+
+    .custom-shape3-service{
+        top: 100%;
+    }
+
+    .custom-shape4-service{
+        top: 135%;
+    }
+
+    .custom-shape2-title-service{
+        font-size: 26px;
+    }
+
+    .custom-shape2-text-service{
+        font-size: 20px;
+    }
+
+    .custom-shape3-title-service{
+        font-size: 26px;
+    }
+
+    .custom-shape3-text-service{
+        font-size: 20px;
+    }
+
+    .custom-shape4-title-service{
+        font-size: 26px;
+    }
+
+    .custom-shape4-text-service{
+        font-size: 20px;
+    }
+
+    
+
+    .title-market{
+        top: 25%;
+        position: absolute;
+        left: 8%;
+        font-size: 24px;
+    }
+
+    .under-title-market{
+        top: 30%;
+        font-size: 18px;
+    }
+
+    .background-image-market{
+        top: 5%;
+        left: 5%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .started-button-market{
+        width: 250px;
+        height: 60px;
+        left: 25%;
+        top: 52%;
+    }
+
+    .started-text{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .started-icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-shape2-market,
+    .custom-shape3-market,
+    .custom-shape4-market{
+        width: 300px;
+        height: 250px;
+        left: 10%;
+    }
+
+    .custom-shape3-market{
+        top: 110%;
+    }
+
+    .custom-shape4-market{
+        top: 150%;
+    }
+
+    .custom-shape2-title-market{
+        font-size: 26px;
+    }
+
+    .custom-shape2-text-market{
+        font-size: 20px;
+    }
+
+    .custom-shape3-title-market{
+        font-size: 26px;
+    }
+
+    .custom-shape3-text-market{
+        font-size: 20px;
+    }
+
+    .custom-shape4-title-market{
+        font-size: 26px;
+    }
+
+    .custom-shape4-text-market{
+        font-size: 20px;
+    }
+
+
+
+    .title-faqs{
+        top: 20%;
+        position: absolute;
+        left: 12%;
+        font-size: 24px;
+    }
+
+    .under-title-faqs{
+        top: 25%;
+        left: 0%;
+        font-size: 18px;
+    }
+
+    .background-image-faqs{
+        top: 13%;
+        left: 10%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .started-button-faqs{
+        width: 250px;
+        height: 60px;
+        left: 25%;
+        top: 52%;
+    }
+
+    .started-text{
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .started-icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    .custom-shape2-faqs,
+    .custom-shape3-faqs,
+    .custom-shape4-faqs{
+        width: 300px;
+        height: 260px;
+        left: 10%;
+    }
+
+    .custom-shape3-faqs{
+        top: 110%;
+    }
+
+    .custom-shape4-faqs{
+        top: 150%;
+    }
+
+    .custom-shape2-title-faqs{
+        font-size: 26px;
+    }
+
+    .custom-shape2-faqs li{
+        font-size: 20px;
+    }
+
+    .custom-shape2-faqs var{
+        font-size: 22px;
+    }
+
+    .custom-shape3-title-faqs{
+        font-size: 26px;
+    }
+
+    .custom-shape3-faqs li{
+        font-size: 20px;
+    }
+
+    .custom-shape3-faqs var{
+        font-size: 22px;
+    }
+
+    .custom-shape4-title-faqs{
+        font-size: 26px;
+    }
+
+    .custom-shape4-faqs li{
+        font-size: 20px;
+    }
+
+    .custom-shape4-faqs var{
+        font-size: 22px;
+    }
+  }
