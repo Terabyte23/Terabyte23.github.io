@@ -5,10 +5,8 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -30,12 +28,28 @@ header p {
 .container-ma {
     text-align: center;
     margin-bottom: 50px;
+    flex: 1;
+}
+
+.container-ma .title {
+    position: absolute;
+    top: 16%;
+    left: 15%;
 }
 
 .title {
     font-size: 1.8rem;
     font-weight: 400;
     color: #ffffff;
+    text-align: center;
+    align-items: center;
+}
+
+.container .title {
+    position: absolute;
+    z-index: 1001;
+    top: 26%;
+    left: 45%;
 }
 
 .description {
@@ -46,24 +60,76 @@ header p {
     gap: 20px;
 }
 
-.my_projects {
+.folder-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 90%;
+    left: 10%;
+    top: 50%;
+    z-index: 1001;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+
+.folder {
+    background-color: #333333;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 15px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.folder.open {
+    height: auto;
+}
+
+.folder h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+}
+
+.folder-content {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.folder.open .folder-content {
+    display: block;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .btn {
     background-color: #333333;
     color: #ffffff;
-    font-size: 1.2rem;
-    padding: 15px 25px;
+    font-size: 1rem;
+    padding: 12px 20px;
     border: none;
-    border-radius: 15px;
+    border-radius: 10px;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
+    margin: 5px;
+    width: 100%;
 }
 
 .btn a {
@@ -77,13 +143,14 @@ header p {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     text-align: center;
     padding: 50px 0;
     background-color: rgba(18, 18, 18, 0.9);
     color: #b0b0b0;
+    margin-top: auto;
 }
 
 footer a {
@@ -97,8 +164,3 @@ footer a:hover {
     color: #ffffff;
 }
 
-.container h1 {
-    margin-left: 45%;
-    margin-bottom: 50px;
-    font-weight: bold;
-}
