@@ -1,0 +1,495 @@
+html, body {
+    font-family: "Jersey 10", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+.logo-text{
+    font-weight: normal;
+    font-size: 64px;
+    color: #E2B8F8;
+    position: absolute;
+    top: 1%;
+    left: 13%;
+}
+
+.logo {
+    width: 189px;
+    height: 139px;
+    z-index: 1001;
+    position: absolute;
+    top: -10px;
+}
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px;
+    transition: 0.3s;
+}
+.text{
+    color: #A671F2;
+    position: absolute;
+    top: 20%;
+    left: 24%;
+    text-align: center;
+    font-size: 48px;
+
+}
+.text2{
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 23.8%;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+
+.contact-text{
+    position: absolute;
+    top: 55%;
+    left: 8.8%;
+    font-size: 64px;
+    color: black;
+}
+.shadow{
+    color: black;
+    position: absolute;
+    left: 4.8%;
+    text-align: center;
+    font-size: 48px;
+    top: 65%;
+}
+.text3{
+    color: #A671F2;
+    position: absolute;
+    left: 5%;
+    text-align: center;
+    font-size: 48px;
+    top: 65%;
+}
+.text4{
+    color: #A671F2;
+    position: absolute;
+    left: 5%;
+    text-align: center;
+    font-size: 48px;
+    top: 70%;
+}
+.shadow2{
+    color: black;
+    position: absolute;
+    left: 4.8%;
+    text-align: center;
+    font-size: 48px;
+    top: 70%;
+}
+.shadow3{
+    color: black;
+    position: absolute;
+    left: 4.8%;
+    text-align: center;
+    font-size: 48px;
+    top: 75%;
+}
+.text5{
+    color: #A671F2;
+    position: absolute;
+    left: 5%;
+    text-align: center;
+    font-size: 48px;
+    top: 75%;
+}
+
+nav {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: flex-end;
+    font-size: 36px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    position: relative;
+    left: 100%;
+}
+
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.icon-home    { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-market  { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-reviews { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-about   { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-cart    { width: 50px; height: 50px; transform: translateY(-60%);}
+
+
+.nav-text-wrapper{
+    position: relative;
+    display: inline-block;
+    transform: translateY(-100%);
+}
+
+
+.text-front {
+    color: #E2B8F8;
+    z-index: 1;
+    transition: transform .3s ease, color .3s ease;
+    position: relative;
+}
+
+.text-back {
+    color: #000;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(3px);
+    transition: transform .3s ease, color .3s ease;
+}
+
+.nav-link:hover .text-front {
+    transform: translateY(-3px);
+    color: #D17DC2;
+}
+
+.nav-link:hover .text-back {
+    transform: translateY(6px);
+    color: #555;
+}
+.item1{
+    position: absolute;
+    background-color: #7379b4;
+    width: 25%;
+    height: 60%;
+    top: 30%;
+    left: 20%;
+    border-radius: 20px;
+
+}
+.item2{
+    position: absolute;
+    background-color: #7379b4;
+    width: 25%;
+    height: 60%;
+    top: 30%;
+    left: 50%;
+    border-radius: 20px;
+
+}
+.item_text{
+    position: relative;
+    top: -5%;
+    text-align: center;
+    color: #E2B8F8;
+    font-size: 64px;
+    font-weight: normal;
+}
+.game-card {
+    position: absolute;
+    left:2%;
+    width: 220px;
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+.game-image {
+    width: 220px;
+    height: 159px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-title {
+    font-size: 20px;
+    margin: 4px 8px 0;
+    font-weight: normal;
+}
+
+.game-tags {
+    font-size: 15px;
+    color: #7379B4;
+    margin: 2px 8px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.game-description {
+    font-size: 15px;
+    margin: 2px 8px;
+    color: #ccc;
+    font-weight: normal;
+}
+.item_dis{
+    position: absolute;
+    background-color: #5B61A1;
+    width: 220px;
+    height: 270px;
+    border-radius: 20px;
+    right: 2%;
+}
+.text_dis{
+    position: relative;
+    top: -5%;
+    text-align: center;
+    color: #E2B8F8;
+    font-size: 36px;
+    font-weight: normal;
+}
+.button_dis{
+    position: relative;
+    background-color: #20183A;
+    top: 58%;
+    width: 50%;
+    border-radius: 5px;
+    left:5% ;
+}
+.button_dis2{
+    position: relative;
+    background-color: #20183A;
+    top: 47%;
+    width: 20%;
+    border-radius: 5px;
+    right:-75% ;
+}
+@media (max-width: 1024px) {
+    .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* фиксируем его */
+        top: 20px; /* расстояние от верха */
+        right: 20px; /* от правого края */
+        z-index: 1002;
+    }
+
+
+    .burger.toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+        background: #000;
+    }
+
+    .burger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+        background: #000;
+    }
+
+
+    /* Скрыть навигацию по умолчанию */
+    .nav-list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #01091B, #01052E, #1A1390, #360A63, #221449, #77367A, #2E2B71);
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        height: 100vh; /* во всю высоту экрана */
+        padding: 0; /* убираем все отступы */
+        margin: 0; /* если нужно */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-left: 2px solid black;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    .nav-item {
+        margin: 20px;
+    }
+
+    .nav-link {
+        left: 0;
+    }
+
+    .logo-text {
+        position: absolute;
+        top: 0;
+        left: 19%;
+        font-size: 64px;
+        font-weight: normal;
+    }
+
+    .item1 {
+        position: absolute;
+        background-color: #7379b4;
+        width: 55%;
+        height: 40%;
+        top: 15%;
+        left: 22%;
+        border-radius: 20px;
+    }
+
+    .item2 {
+        position: absolute;
+        background-color: #7379b4;
+        width: 55%;
+        height: 40%;
+        top: 58%;
+        left: 22%;
+        border-radius: 20px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .logo-title {
+        width: 400px;
+        height: 265px;
+        position: absolute;
+        top: 22%;
+        left: 10%;
+    }
+    .black-description {
+        position: absolute;
+        top: 4px;
+        left: 26%;
+        color: #000;
+        z-index: 1;
+    }
+
+    .logo {
+        width: 145px;
+        height: 107px;
+        z-index: 1001;
+        position: absolute;
+        top: -10px;
+    }
+
+    .logo-text {
+        position: absolute;
+        top: 0;
+        left: 32%;
+        font-size: 46px;
+        font-weight: normal;
+    }
+
+    .logo-text-down {
+        position: absolute;
+        top: -3px;
+        left: 32%;
+        font-size: 46px;
+        color: #E2B8F8;
+        font-weight: normal;
+    }
+
+    .item1 {
+        position: absolute;
+        background-color: #7379b4;
+        width: 80%;
+        height: 80%;
+        top: 15%;
+        left: 10%;
+        border-radius: 20px;
+    }
+    .item2 {
+        position: absolute;
+        background-color: #7379b4;
+        width: 55%;
+        height: 40%;
+        top: 58%;
+        left: 22%;
+        border-radius: 20px;
+        display: none;
+    }
+
+    .game-card {
+        position: absolute;
+        left: 19%;
+        top: 10%;
+        width: 220px;
+        height: 270px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        text-align: center;
+    }
+
+    .item_dis {
+        position: absolute;
+        background-color: #5B61A1;
+        width: 220px;
+        height: 270px;
+        border-radius: 20px;
+        left: 19%;
+        top: 48%;
+    }
+
+    .button_dis {
+        position: relative;
+        background-color: #20183A;
+        top: 66%;
+        width: 50%;
+        border-radius: 5px;
+        left: 5%;
+    }
+
+    .button_dis2 {
+        position: relative;
+        background-color: #20183A;
+        top: 55%;
+        width: 20%;
+        border-radius: 5px;
+        right: -70%;
+    }
+}

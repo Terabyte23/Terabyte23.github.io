@@ -1,0 +1,347 @@
+html, body {
+    font-family: "Jersey 10", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow:hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+}
+
+.logo {
+    width: 189px;
+    height: 139px;
+    z-index: 1001;
+    position: absolute;
+    top: -10px;
+}
+
+.logo-text {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    font-size: 64px;
+    font-weight: normal;
+}
+
+.logo-text-down {
+    position: absolute;
+    top: -4px;
+    left: 192px;
+    font-size: 64px;
+    color: #E2B8F8;
+    font-weight: normal;
+}
+
+nav {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nav-item {
+    margin: 0 20px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: flex-end;
+    font-size: 36px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    position: relative;
+    left: 100%;
+}
+
+.nav-icon {
+    font-size: 36px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.icon-home    { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-market  { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-reviews { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-about   { width: 50px; height: 50px; transform: translateY(-60%);}
+.icon-cart    { width: 50px; height: 50px; transform: translateY(-60%);}
+
+.nav-text-wrapper{
+    position: relative;
+    display: inline-block;
+    transform: translateY(-100%);
+}
+
+
+.text-front {
+    color: #E2B8F8;
+    z-index: 1;
+    transition: transform .3s ease, color .3s ease;
+    position: relative;
+}
+
+.text-back {
+    color: #000;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(3px);
+    transition: transform .3s ease, color .3s ease;
+}
+
+.nav-link:hover .text-front {
+    transform: translateY(-3px);
+    color: #D17DC2;
+}
+
+.nav-link:hover .text-back {
+    transform: translateY(6px);
+    color: #555;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.market {
+    padding: 40px;
+    position: relative;
+    z-index: 10;
+    min-height: 100vh; /* ⬅ важно */
+}
+
+.card-grid {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+.second-row {
+    position: relative;
+    top: 110%;
+}
+
+
+.game-card {
+    width: 220px;
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.game-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #A671F2;
+}
+
+.game-image {
+    width: 220px;
+    height: 159px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-title {
+    font-size: 20px;
+    margin: 4px 8px 0;
+    font-weight: normal;
+}
+
+.game-tags {
+    font-size: 15px;
+    color: #7379B4;
+    margin: 2px 8px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.game-description {
+    font-size: 15px;
+    margin: 2px 8px;
+    color: #ccc;
+    font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+    .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute; /* фиксируем его */
+        top: 20px; /* расстояние от верха */
+        right: 20px; /* от правого края */
+        z-index: 1002;
+    }
+
+
+    .burger.toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+        background: #000;
+    }
+
+    .burger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+        background: #000;
+    }
+
+
+    /* Скрыть навигацию по умолчанию */
+    .nav-list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(135deg, #2A224C, #4C707D, #1B203D, #433056, #603D5D, #857C85, #0A2445);
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        height: 100vh; /* во всю высоту экрана */
+        padding: 0; /* убираем все отступы */
+        margin: 0; /* если нужно */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1001;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-left: 2px solid black;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    .nav-item {
+        margin: 20px;
+    }
+
+    .nav-link {
+        left: 0;
+    }
+
+    .logo-text {
+        position: absolute;
+        top: 0;
+        left: 19%;
+        font-size: 64px;
+        font-weight: normal;
+    }
+
+    .card-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;  /* Центрируем карточки в каждой строке */
+        gap: 20px 40px; /* 20px вертикальный, 40px горизонтальный промежуток */
+        max-width: calc(220px * 4 + 40px * 3); /* 4 карточки + 3 промежутка между ними */
+        margin: 0 auto; /* центрируем контейнер по горизонтали */
+        position: relative;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 430px) {
+    html, body {
+        overflow: auto;
+    }
+
+
+
+    .card-grid {
+        position: relative; /* чтобы вложенные элементы позиционировались относительно контейнера */
+        max-width: 1000px;  /* у тебя уже есть */
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden; /* не позволит элементам выходить за границы */
+        padding: 10px; /* можно добавить немного отступа, чтобы карточки не прилегали вплотную */
+        box-sizing: border-box;
+    }
+
+    .game-card {
+        box-sizing: border-box;
+        max-width: 100%; /* чтобы карточка не была шире контейнера */
+        /* Убери абсолютное позиционирование, если есть */
+        position: relative; /* или static по умолчанию */
+        /* Можно добавить flex свойства, если карточки внутри flex-контейнера */
+    }
+
+
+
+    .market{
+        top: 5%;
+    }
+
+    .logo-text,
+    .logo-text-down {
+        z-index: 1003;
+    }
+
+    .game-card {
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        will-change: opacity, transform;
+    }
+
+    .logo {
+        width: 145px;
+        height: 107px;
+        z-index: 1001;
+        position: absolute;
+        top: -10px;
+    }
+
+    .logo-text {
+        position: absolute;
+        top: 0;
+        left: 32%;
+        font-size: 46px;
+        font-weight: normal;
+    }
+
+    .logo-text-down {
+        position: absolute;
+        top: -3px;
+        left: 32%;
+        font-size: 46px;
+        color: #E2B8F8;
+        font-weight: normal;
+    }
+}

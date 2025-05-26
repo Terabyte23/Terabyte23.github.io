@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reviews.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>PixelGames</title>
+</head>
+<body>
+<img class="bg" src="pic/image%2016.png" alt="bg">
+<header>
+    <a href="index.html"><div class="logo-div">
+        <img class="logo" src="pic/thumbnail_image-removebg-preview.png" alt="logo">
+        <h1 class="logo-text">Pixel Games</h1>
+        <h1 class="logo-text-down">Pixel Games</h1>
+    </div>
+    </a>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <img src="pic/home.png"   class="nav-icon icon-home"    alt="Home">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Home</span>
+              <span class="text-back">Home</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="market.html" class="nav-link">
+                    <img src="pic/market.png" class="nav-icon icon-market"  alt="Market">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Market</span>
+              <span class="text-back">Market</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="reviews.html" class="nav-link">
+                    <img src="pic/reviews.png" class="nav-icon icon-reviews" alt="Reviews">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Reviews</span>
+              <span class="text-back">Reviews</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <img src="pic/about.png"  class="nav-icon icon-about"   alt="About">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">About</span>
+              <span class="text-back">About</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="cart.html" class="nav-link">
+                    <img src="pic/cart.png"   class="nav-icon icon-cart"    alt="Cart">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Cart</span>
+              <span class="text-back">Cart</span>
+            </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<div class="reviews-grid">
+    <div class="review-card">
+        <p class="review-text">
+            This platform is a game-changer for indie devs! My game got a lot of attention, and I instantly felt the connection with players. The interface is simple, and the selling tools are very convenient.
+        </p>
+        <hr class="divider">
+        <div class="review-user">
+            <img src="avatars/image.png" alt="John Smith" class="avatar">
+            <span class="username">John Smith</span>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <p class="review-text">
+            I love this site! It’s got all the best pixel games I've been looking for. It's great to see so many unique indie projects you can't find anywhere else.
+        </p>
+        <hr class="divider">
+        <div class="review-user">
+            <img src="avatars/image%20(1).png" alt="Emily Johnson" class="avatar">
+            <span class="username">Emily Johnson</span>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <p class="review-text">
+            Easy to list my game and the marketing support is fantastic. The platform really helped my game find its audience. I highly recommend it to anyone looking to take their game to the next level!
+        </p>
+        <hr class="divider">
+        <div class="review-user">
+            <img src="avatars/image%20(1).png" alt="Ryan Brown" class="avatar">
+            <span class="username">Ryan Brown</span>
+        </div>
+    </div>
+
+    <div class="review-card">
+        <p class="review-text">
+            As a retro game fan, I’m in heaven! There are so many cool projects here that I haven’t seen anywhere else. There’s something for everyone!
+        </p>
+        <hr class="divider">
+        <div class="review-user">
+            <img src="avatars/image%20(1).png" alt="Sophie Williams" class="avatar">
+            <span class="username">Sophie Williams</span>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll('.review-card');
+        const container = document.querySelector('.reviews-grid');
+        const containerWidth = container.clientWidth;
+        const containerHeight = container.clientHeight;
+
+        const placedRects = [];
+
+        function isOverlapping(newRect) {
+            return placedRects.some(rect => {
+                return !(
+                    newRect.x + newRect.width < rect.x ||
+                    newRect.x > rect.x + rect.width ||
+                    newRect.y + newRect.height < rect.y ||
+                    newRect.y > rect.y + rect.height
+                );
+            });
+        }
+
+        cards.forEach(card => {
+            const cardWidth = card.offsetWidth;
+            const cardHeight = card.offsetHeight;
+
+            let tries = 0;
+            let maxTries = 100;
+            let x, y, newRect;
+
+            do {
+                x = Math.random() * (containerWidth - cardWidth);
+                y = Math.random() * (containerHeight - cardHeight);
+                newRect = { x, y, width: cardWidth, height: cardHeight };
+                tries++;
+            } while (isOverlapping(newRect) && tries < maxTries);
+
+            placedRects.push(newRect);
+            card.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    });
+</script>
+<script>
+    const burger = document.querySelector('.burger');
+    const navList = document.querySelector('.nav-list');
+
+    burger.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        // Анимация бургера: поворот/крестик
+        burger.classList.toggle('toggle');
+    });
+</script>
+</body>
+</html>

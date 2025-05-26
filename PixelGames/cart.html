@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="cart.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>cart</title>
+</head>
+<body>
+<img class="bg" src="pic/image 17.png" alt="">
+<header>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">
+          <img src="pic/home.png"   class="nav-icon icon-home"    alt="Home">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Home</span>
+              <span class="text-back">Home</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="market.html" class="nav-link">
+          <img src="pic/market.png" class="nav-icon icon-market"  alt="Market">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Market</span>
+              <span class="text-back">Market</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="reviews.html" class="nav-link">
+          <img src="pic/reviews.png" class="nav-icon icon-reviews" alt="Reviews">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Reviews</span>
+              <span class="text-back">Reviews</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">
+          <img src="pic/about.png"  class="nav-icon icon-about"   alt="About">
+          <span class="nav-text-wrapper">
+              <span class="text-front">About</span>
+              <span class="text-back">About</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="cart.html" class="nav-link">
+          <img src="pic/cart.png"   class="nav-icon icon-cart"    alt="Cart">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Cart</span>
+              <span class="text-back">Cart</span>
+            </span>
+        </a>
+      </li>
+    </ul>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="logo-div">
+    <img class="logo" src="pic/thumbnail_image-removebg-preview.png" alt="logo">
+    <h1 class="logo-text">Pixel Games</h1>
+  </div>
+</header>
+
+<div class="item1">
+
+<h1 class="item_text">Item</h1>
+  <div class="game-card">
+    <img src="gamepic/image 5.png" alt="Game Title" class="game-image" />
+    <h3 class="game-title">Rain World: Complete Edition</h3>
+    <p class="game-tags">#Difficult, #Metroidvania</p>
+    <p class="game-description">The Ultimate Rain World Package</p>
+  </div>
+
+    <div class="item_dis">
+
+      <h1 class="text_dis">price</h1>
+      <h1 class="text_dis"> 20$ product</h1>
+      <h1 class="text_dis">2$ NDS</h1>
+      <h1 class="text_dis">Total 22$</h1>
+    </div>
+    <div class="button_dis">
+      <h1 class="text_dis">continue shoping</h1>
+    </div>
+    <div class="button_dis2">
+      <h1 class="text_dis">buy</h1>
+    </div>
+</div>
+<div class="item2">
+
+  <h1 class="item_text">Item</h1>
+  <div class="game-card">
+    <img src="gamepic/image 12.png" alt="Game Title" class="game-image" />
+    <h3 class="game-title">The Void</h3>
+    <p class="game-tags">#Horror, #Lovecraftian Horror</p>
+    <p class="game-description">Short Adventure Game</p>
+  </div>
+
+  <div class="item_dis">
+
+    <h1 class="text_dis">price</h1>
+    <h1 class="text_dis"> 10$ product</h1>
+    <h1 class="text_dis">1$ NDS</h1>
+    <h1 class="text_dis">Total 11$</h1>
+  </div>
+  <div class="button_dis">
+    <h1 class="text_dis">continue shoping</h1>
+  </div>
+  <div class="button_dis2">
+    <h1 class="text_dis">buy</h1>
+  </div>
+</div>
+
+</body>
+<script>
+  const burger = document.querySelector('.burger');
+  const navList = document.querySelector('.nav-list');
+
+  burger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    // Анимация бургера: поворот/крестик
+    burger.classList.toggle('toggle');
+  });
+</script>
+</html>

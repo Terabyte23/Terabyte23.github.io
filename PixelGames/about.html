@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-eqauiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <title>PixelGames</title>
+</head>
+<body>
+<img class="bg" src="pic/image 15.png" alt="">
+
+<header>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <img src="pic/home.png"   class="nav-icon icon-home"    alt="Home">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Home</span>
+              <span class="text-back">Home</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="market.html" class="nav-link">
+                    <img src="pic/market.png" class="nav-icon icon-market"  alt="Market">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Market</span>
+              <span class="text-back">Market</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="reviews.html" class="nav-link">
+                    <img src="pic/reviews.png" class="nav-icon icon-reviews" alt="Reviews">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Reviews</span>
+              <span class="text-back">Reviews</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="about.html" class="nav-link">
+                    <img src="pic/about.png"  class="nav-icon icon-about"   alt="About">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">About</span>
+              <span class="text-back">About</span>
+            </span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="cart.html" class="nav-link">
+                    <img src="pic/cart.png"   class="nav-icon icon-cart"    alt="Cart">
+                    <span class="nav-text-wrapper">
+              <span class="text-front">Cart</span>
+              <span class="text-back">Cart</span>
+            </span>
+                </a>
+            </li>
+        </ul>
+        <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="logo-div">
+        <img class="logo" src="pic/thumbnail_image-removebg-preview.png" alt="logo">
+        <h1 class="logo-text">Pixel Games</h1>
+    </div>
+</header>
+
+<a class="text2" >Welcome to the pixel game marketplace — <br> a hub for fans of retro aesthetics and indie gems. <br>  From old-school classics to fresh releases,<br>  we connect developers with players who love pixel art. <br>  Our mission: support creators and keep the pixel spirit alive.</a>
+<a class="text" >Welcome to the pixel game marketplace — <br> a hub for fans of retro aesthetics and indie gems. <br>  From old-school classics to fresh releases,<br>  we connect developers with players who love pixel art. <br>  Our mission: support creators and keep the pixel spirit alive.</a>
+
+<img class="contact" src="pic/image-removebg-preview206.png" alt="">
+<a class="contact-text">Contact</a>
+<a class="contact-text2">Contact</a>
+<a class="shadow">Email : pixelgames@info.com</a>
+<a class="text3">Email : pixelgames@info.com</a>
+
+<a class="shadow2" >Phone : +37255665566</a>
+<a class="text4" >Phone : +37255665566</a>
+
+<a class="shadow3">Owner Name : Aleksandr and Maksim</a>
+<a class="text5">Owner Name : Aleksandr and Maksim</a>
+</body>
+<script>
+    const burger = document.querySelector('.burger');
+    const navList = document.querySelector('.nav-list');
+
+    burger.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        // Анимация бургера: поворот/крестик
+        burger.classList.toggle('toggle');
+    });
+</script>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <title>PixelGames</title>
+</head>
+<body>
+<img class="bg" src="pic/image%2013.png" alt="bg">
+<header>
+  <a href="index.html"><div class="logo-div">
+    <img class="logo" src="pic/thumbnail_image-removebg-preview.png" alt="logo">
+    <h1 class="logo-text">Pixel Games</h1>
+    <h1 class="logo-text-down">Pixel Games</h1>
+  </div>
+  </a>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">
+          <img src="pic/home.png"   class="nav-icon icon-home"    alt="Home">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Home</span>
+              <span class="text-back">Home</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="market.html" class="nav-link">
+          <img src="pic/market.png" class="nav-icon icon-market"  alt="Market">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Market</span>
+              <span class="text-back">Market</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="reviews.html" class="nav-link">
+          <img src="pic/reviews.png" class="nav-icon icon-reviews" alt="Reviews">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Reviews</span>
+              <span class="text-back">Reviews</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">
+          <img src="pic/about.png"  class="nav-icon icon-about"   alt="About">
+          <span class="nav-text-wrapper">
+              <span class="text-front">About</span>
+              <span class="text-back">About</span>
+            </span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="cart.html" class="nav-link">
+          <img src="pic/cart.png"   class="nav-icon icon-cart"    alt="Cart">
+          <span class="nav-text-wrapper">
+              <span class="text-front">Cart</span>
+              <span class="text-back">Cart</span>
+            </span>
+        </a>
+      </li>
+    </ul>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+<div class="title">
+  <img class="logo-title" src="pic/logo-title.png" alt="logo-title">
+</div>
+<div class="description">
+  <div class="description">
+    <h1 class="pink-description">
+      We love pixel games! <br>Here you will find a large selection of pixel games
+    </h1>
+    <h1 class="black-description">
+      We love pixel games! <br>Here you will find a large selection of pixel games
+    </h1>
+  </div>
+
+</div>
+</body>
+<script>
+  const burger = document.querySelector('.burger');
+  const navList = document.querySelector('.nav-list');
+
+  burger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+    // Анимация бургера: поворот/крестик
+    burger.classList.toggle('toggle');
+  });
+</script>
+
+</html>
